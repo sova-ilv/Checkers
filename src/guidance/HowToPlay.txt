@@ -1,5 +1,5 @@
 Enter the procedure on how to play below:
-Press Start to start new game.
+Press Start to start new gamme amga fajs.
 
         //Yellow takes the first move in both modes
         //If someone wants to move secondly, red has to be selected
