@@ -1,10 +1,10 @@
 package checkers;
 
-
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.*;
+
 
 public class CheckerFrame extends JFrame implements ActionListener{
     /**
@@ -23,7 +23,7 @@ public class CheckerFrame extends JFrame implements ActionListener{
            //no need to handle exception as it only affect the appearence
         }
         setupGUI();
-        new PlaySound("sounds//Start.wav").start();
+        new PlaySound("src//sounds//Start.wav").start();
     }
 
     private void setupGUI() {
@@ -32,8 +32,9 @@ public class CheckerFrame extends JFrame implements ActionListener{
         //gmP.imageUpdate(ne, WIDTH, WIDTH, WIDTH, WIDTH, WIDTH)
         add(gmP);
         stB.setHorizontalAlignment(SwingConstants.LEADING);
+
         //stB.setIcon(new ImageIcon(getClass().getResource("/images/checkerIcon.png")));
-        stB.setIcon(new ImageIcon(getClass().getResource("/checkersIcon.jpg")));
+        stB.setIcon(new ImageIcon(getClass().getResource("/images/checkersIcon.jpg")));
         stB.setBackground(Color.LIGHT_GRAY);
         stB.setCursor(new Cursor(Cursor.HAND_CURSOR));
         stB.setBounds(154,420,200,60);
@@ -43,7 +44,7 @@ public class CheckerFrame extends JFrame implements ActionListener{
         stB.setFocusPainted(false);
         add(stB);
 
-        this.setIconImage(new ImageIcon(getClass().getResource("/checkersIcon.jpg")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/checkersIcon.jpg")).getImage());
 
         setSize(608,620);
         //setLocation((int)getToolkit().getScreenSize().getWidth()/2-254,(int)getToolkit().getScreenSize().getHeight()/2-310);
@@ -59,8 +60,8 @@ public class CheckerFrame extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equalsIgnoreCase("Start Game")){
             ((JButton)e.getSource()).setText("New Game");
+            new PlaySound("src//sounds//button.wav").start();
             //new PlaySound("src//sounds//button.wav").start();
-            new PlaySound("sounds//button.wav").start();
             gmP=new Checkers();
             gmP.setBounds(0,0,508,401);
             this.setContentPane(gmP);
