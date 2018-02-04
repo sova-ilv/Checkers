@@ -43,7 +43,7 @@ public class StartPanel extends JPanel{
         g.drawString("K.C.B. GAJASINGHE",180,240);
         g.drawString("070137M",320,240);
         ////////////////////////////////////////////////////////////////////////
-        g.drawImage(new ImageIcon(getClass().getResource("/checkersIcon.jpg")).getImage(),350,280,this);//checkersIcon.jpg
+        g.drawImage(new ImageIcon(getClass().getResource("/images/checkersIcon.jpg")).getImage(),350,280,this);//checkersIcon.jpg
 
 
         g.setColor(new Color(0,0,0));
